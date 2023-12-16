@@ -14,3 +14,10 @@ It handles the creation of a new movie. It decodes the JSON data from the reques
 This function updates an existing movie. It retrieves the movie ID from the request parameters, iterates through the `movies` slice to find the movie with the matching ID, removes the existing movie, decodes the JSON data from the request body into a `Movie` struct, assigns the ID to the updated movie, appends the updated movie to the `movies` slice, encodes the updated movie into JSON, and sends it back as the response.
 
 In the `main` function, a router (`mux.NewRouter()`) is created to handle different HTTP methods (`GET`, `POST`, `PUT`, `DELETE`) on different endpoints (`/movies`, `/movies/{id}`). Movies are pre-populated with some data for demonstration purposes. Finally, the server is started on port 8000 using `http.ListenAndServe(":8000", r)`.
+
+To Run the Project
+Clone the repository: git clone git@github.com:Harshul14/ZopSmart-Movies-CRUD-.git
+Navigate to the project directory: cd ZopSmart-Movies-CRUD-
+Install dependencies: go mod tidy
+Build the project: go build
+Run the executable: go run main
